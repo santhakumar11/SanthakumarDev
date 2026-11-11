@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<article class="article-page">
+  <a class="back-link" href="{{ '/' | relative_url }}#writing"><span aria-hidden="true">←</span> All writing</a>
+  <header class="article-header">
+    <p class="eyebrow">FIELD NOTES{% if page.tags.size > 0 %} <span aria-hidden="true">/</span> {{ page.tags | first | upcase }}{% endif %}</p>
+    <h1>{{ page.title }}</h1>
+    <div class="article-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+      <span aria-hidden="true">·</span>
+      <span>{{ content | number_of_words | divided_by: 200 | plus: 1 }} min read</span>
+    </div>
+  </header>
+  <div class="article-content">
+    {{ content }}
+  </div>
+  <footer class="article-footer">
+    <span class="closing-mark" aria-hidden="true">✳</span>
+    <p>Thanks for reading. Keep exploring.</p>
+    <a class="text-link" href="{{ '/' | relative_url }}#writing">More writing <span aria-hidden="true">↗</span></a>
+  </footer>
+</article>

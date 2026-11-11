@@ -1,0 +1,18 @@
+title: "Santhakumar"
+description: "Notes on software, learning, and the things in between."
+url: "https://santhakumar11.github.io"
+baseurl: "/SanthakumarDev"
+markdown: kramdown
+permalink: /writing/:title/
+timezone: Asia/Kolkata
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - node_modules
